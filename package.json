@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "root",
+  "version": "0.0.0",
+  "author": "Hyeonjong <nianelo4@gmail.com>",
+  "scripts": {},
+  "devDependencies": {
+    "turbo": "2.2.0"
+  },
+  "packageManager": "pnpm@8.6.2"
+}
