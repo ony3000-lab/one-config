@@ -1,0 +1,37 @@
+{
+  "name": "@ony3000/one-config",
+  "version": "0.0.0",
+  "description": "A single package containing multiple configs.",
+  "keywords": [
+    "eslint",
+    "prettier",
+    "tsconfig"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ony3000-lab/one-config.git"
+  },
+  "license": "MIT",
+  "author": "Hyeonjong <nianelo4@gmail.com>",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "vite build --watch --minify=false",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "eslint": "8.57.1",
+    "prettier": "3.3.3",
+    "typescript": "5.6.3",
+    "vite": "5.4.9",
+    "vite-plugin-dts": "4.2.4"
+  },
+  "peerDependencies": {
+    "eslint": "^8",
+    "prettier": "^3",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@8.6.2"
+}
