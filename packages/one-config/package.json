@@ -16,7 +16,6 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.js",
   "scripts": {
     "dev": "vite build --watch --minify=false",
     "build": "vite build"
