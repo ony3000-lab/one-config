@@ -1,0 +1,13 @@
+name: Working Directory Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check-working-directory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Print working directory
+        run: pwd
+        working-directory: ./packages/one-config
