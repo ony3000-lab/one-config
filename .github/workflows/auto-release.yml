@@ -27,8 +27,15 @@ jobs:
           run_install: true
       - name: Build a bundle
         run: pnpm turbo build
+      - name: Bump a package version as github-actions bot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          npm version ${{ inputs.releaseLevel }} -m "chore: release %s"
+          git push && git push --tags
+        working-directory: ./packages/one-config
       - name: Publish package
-        run: npm publish --dry-run
+        run: npm publish
         working-directory: ./packages/one-config
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
