@@ -5,6 +5,10 @@
 ## 설치
 
 ```sh
+npm config set @ony3000-lab:registry=https://npm.pkg.github.com/
+```
+
+```sh
 npm install -D @ony3000-lab/one-config
 ```
 
