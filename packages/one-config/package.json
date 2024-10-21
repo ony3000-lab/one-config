@@ -1,6 +1,6 @@
 {
   "name": "@ony3000-lab/one-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A single package containing multiple configs.",
   "keywords": [
     "eslint",
