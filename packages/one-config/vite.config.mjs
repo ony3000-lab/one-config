@@ -20,7 +20,7 @@ export default defineConfig({
     dts(),
     {
       name: "copy-tsconfig",
-      transform(code, id) {
+      writeBundle(options, bundle) {
         cpSync(
           resolve(__dirname, "src/tsconfig-base.json"),
           resolve(__dirname, "dist/tsconfig-base.json"),
