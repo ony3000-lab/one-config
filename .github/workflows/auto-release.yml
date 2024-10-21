@@ -31,7 +31,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          npm version ${{ inputs.releaseLevel }} -m "chore: release %s"
+          npm version ${{ inputs.releaseLevel }}
+          NEXT_VERSION=$(npm pkg get version | awk '{print substr($0, 2, length($0)-2)}')
+          git add package.json
+          echo $NEXT_VERSION | xargs -I {} git commit -m "chore: release {}"
+          echo $NEXT_VERSION | xargs -I {} git tag v{}
           git push && git push --tags
         working-directory: ./packages/one-config
       - name: Publish package
