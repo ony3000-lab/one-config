@@ -1,5 +1,5 @@
 {
-  "name": "@ony3000/one-config",
+  "name": "@ony3000-lab/one-config",
   "version": "0.0.0",
   "description": "A single package containing multiple configs.",
   "keywords": [
@@ -45,5 +45,8 @@
     "prettier": "^3",
     "typescript": "^5"
   },
-  "packageManager": "pnpm@8.6.2"
+  "packageManager": "pnpm@8.6.2",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
